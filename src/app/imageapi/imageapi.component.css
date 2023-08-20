@@ -1,0 +1,13 @@
+
+    
+    @media screen and (max-width: 768px) {
+        .cardouter{
+            height: 235px!important;
+            /* border: 1px solid red; */
+          }
+      }
+    
+      .cardouter{
+        height: 300px;
+        width: auto;
+      }

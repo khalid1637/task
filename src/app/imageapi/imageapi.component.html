@@ -1,0 +1,29 @@
+
+<div class="container">
+    <div class="search-results" infinite-scroll [infiniteScrollDistance]="scrollDistance"
+      [infiniteScrollUpDistance]="scrollUpDistance" [infiniteScrollThrottle]="throttle" (scrolled)="onCatScrollDown()">
+      <div class="row">
+        <div class="col-md-4 col-6" *ngFor="let dat of imageData">
+  
+          <div class="card p-3" style="margin-bottom: 15px;">
+            <div class="cardouter">
+              <img src={{dat.url}} class="img-fluid" loading="lazy" alt="Responsive image"
+                style="background-size: 100% 100%; height: 100%;width: 100%;">
+            </div>
+            <div style="height: 80px;">
+              <p>{{dat.itemName}}</p>
+            </div>
+  
+            <p>{{dat. itemPrice | currency:'INR'}}</p>
+            <br>
+          </div>
+        </div>
+        <br>
+      </div>
+      <!-- <div *ngFor="let dat of alldatas">
+              <img src={{dat.url}} style="width: 200px; height: 300px;">
+              <p>{{dat.itemName}}</p>
+              <p>{{dat.itemPrice}}</p>
+          </div> -->
+    </div>
+  </div>

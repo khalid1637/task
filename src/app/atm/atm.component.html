@@ -1,0 +1,108 @@
+<div class="container-fluid main-section">
+    <form [formGroup]="atmcash" class="text-start">
+        <div class="row">
+            <h2>Current Available Denomination in Machine</h2>
+            <div class="col-xl-12 col-sm-12 mb-4">
+                <div class="card">
+                    <div class="card-body tex" style="background-color: rgba(238,238,238,255);">
+                        <div class="second row">
+                            <div class="col-md-6">
+                                <div class="row mt-3">
+                                    <div class="col-md-4 col-4">
+                                        <label for="twok">2000</label>
+                                    </div>
+                                    <div class="col-md-2 col-4">
+                                        <input type="text" class="form-control "
+                                            formControlName="twothoundandnotes">
+                                    </div>
+                                    <!-- {{calculate}} -->
+                                    <div class="col-md-2 col-4">
+                                        <div class="input-group input-group-outline ">
+                                            <input type="text" class="form-control"  formControlName="twok" #a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-4 my-auto">
+                                        <label class="Segment">500</label>
+                                    </div>
+                                    <div class="col-md-2 col-4">
+                                        <input type="text" class="form-control w-100"
+                                            formControlName="fivehundrednotes">
+                                    </div>
+                                    <div class="col-md-2 col-4">
+                                        <div class="input-group input-group-outline">
+                                            <input type="text" class="form-control w-100" formControlName="fivek" #b>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row mt-3">
+                                    <div class="col-4 my-auto">
+                                        <label for="bankcode" class="mb-0">200</label>
+                                    </div>
+                                    <div class="col-md-2 col-4">
+                                        <input type="text" class="form-control w-100" formControlName="twohundred">
+                                    </div>
+                                    <div class="col-md-2 col-4">
+                                        <div class="input-group input-group-outline">
+                                            <input type="text" class="form-control w-100" formControlName="twook" #c>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4 my-auto">
+                                        <label for="bankname" class="mb-0">100</label>
+                                    </div>
+                                    <div class="col-md-2 col-4">
+                                        <input type="text" class="form-control w-100" formControlName="hundrednotes">
+                                    </div>
+                                    <div class=" col-md-2 col-4">
+                                        <div class="input-group input-group-outline">
+                                            <input type="text" class="form-control w-100" formControlName="hundredk" #d>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-4 my-auto">
+                                        <label for="bankname" class="mb-0">Total</label>
+                                    </div>
+                                    <div class="col-md-2 col-4">
+                                        {{totaldatas}}
+                                    </div>
+                                    <div class="col-md-2 col-4">
+                                        <div class="input-group input-group-outline">
+                                            <button type="button" class="btn btn-primary "
+                                                (click)="Deposit(a.value,b.value,c.value,d.value)">Deposit</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row mt-3">
+
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Withdraw Money"
+                                            aria-label="Withdraw " aria-describedby="basic-addon2"
+                                            formControlName="withmoney">
+                                        <!-- <span class="btn btn-primary" id="basic-addon2">Withdraw</span> -->
+                                        <button type="button" class="btn btn-success"
+                                            (click)="Withdraw()">Withdraw</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

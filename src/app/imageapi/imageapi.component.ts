@@ -1,14 +1,15 @@
-import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
 import { DatePipe } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-imageapi',
+  templateUrl: './imageapi.component.html',
+  styleUrls: ['./imageapi.component.css']
 })
-export class AppComponent {
+export class ImageapiComponent implements OnInit {
+
   title = 'ecom-project';
   images: string[] = [];
   currentPage = 1;
@@ -56,8 +57,5 @@ export class AppComponent {
     // console.log("slice image data", this.alldatas.slice(20, 35))
     console.log("imageData", this.imageData)
   }
-  atm(){
-    this.router.navigate(['/nextpage']); // Replace 'next-page' with your actual route
 
-  }
 }
